@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<style type="text/css">
+html { height: 100% }
+body { height: 100%; margin: 0; padding: 0 }
+#map_canvas { height: 100% }
+</style>
+<!-- include the API -->
+<script type="text/javascript"
+src="http://maps.googleapis.com/maps/api/js?sensor=false">
+</script>
+<script type="text/javascript">
+function createMap() {
+var mapDiv = document.getElementById("map_canvas");
+var map;
+// Set center to point to chicago
+var latlng =new google.maps.LatLng(41.881944, -87.627778);
+var myOptions = {
+zoom: 10,
+center: latlng,
+mapTypeId: google.maps.MapTypeId.ROADMAP
+}
+map = new google.maps.Map(mapDiv, myOptions);
+}
+</script>
+</head>
+<body>
+<div id="map_canvas" style="width:100%; height:100%"></div>
+</body>
+</html># tryhard
